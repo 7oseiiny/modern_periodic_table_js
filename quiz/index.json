@@ -1,0 +1,54 @@
+[
+{
+"question":"The colour of hydrogen is : ",
+"answer_1":" Blue",
+"answer_2":" Yellow ",
+"answer_3":" Orange ",
+"answer_4":" No color ",
+"correct_answer":" No color "
+
+},
+
+
+{
+    "question":"Para hydrogen is : ",
+    "answer_1":" Less stable than ortho hydrogen ",
+    "answer_2":" More stable than ortho hydrogen ",
+    "answer_3":" As stable as ortho hydrogen  ",
+    "answer_4":" No one of the above ",
+    "correct_answer":" More stable than ortho hydrogen "
+    
+ },
+
+ {
+        "question":"A compound among the following that has hydrogen in the atomic state is : ",
+        "answer_1":" Metallic hydrides",
+        "answer_2":" Ionic hydrides ",
+        "answer_3":" Molecular hydrides",
+        "answer_4":" Water ",
+        "correct_answer":" Metallic hydrides"
+        
+  },
+        
+  {
+            "question":"The adsorption of hydrogen by palladium is called : ",
+            "answer_1":"Hydrogenation",
+            "answer_2":"  Hydration",
+            "answer_3":" Reduction ",
+            "answer_4":"Occlusion",
+            "correct_answer":" Occlusion"
+            
+ },
+            
+ {
+    "question":"Nascent hydrogen consists of : ",
+    "answer_1":"Hydrogen atoms with excess energy",
+    "answer_2":" Hydrogen molecules with excess energy",
+    "answer_3":" Hydrogen ions within the excited state",
+    "answer_4":" Solvated protons",
+    "correct_answer":"Hydrogen atoms with excess energy"
+    
+}
+
+
+]

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 95vh;
+            flex-direction: column;
+            
+        }
+     
+
+    </style>
+
+
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let atomicNumber=window.location.search.split("?")[1].split("&")[0].split("=")[1]
+        let name =window.location.search.split("?")[1].split("&")[1].split("=")[1]
+
+
+
+
+        
+        var xhr=new XMLHttpRequest();
+        xhr.open("GET","data.json")
+
+        xhr.send()
+        let res
+        xhr.addEventListener("readystatechange",function(){
+
+            if(xhr.readyState==4){
+                
+                res=[...JSON.parse(xhr.response)]
+                console.log(res);
+
+                let c =0
+                for (const obj of res) {
+                if (obj.atomicNumber==atomicNumber) {
+                    console.log(obj );
+                    document.body.innerHTML= 
+            `
+            <div class="information">
+                <div class="symbol">${obj.symbol}</div>
+                <div class="info">
+                <h3 class="name">${obj.name}</h3>
+                <ul>
+                    <li><strong>Atomic Number:</strong>${obj.atomicNumber}</li>
+                    <li><strong>Atomic Mass:</strong>${obj.atomicMass}</li>
+                    <li><strong>Electronic Configuration:</strong>${obj.electronicConfiguration}</li>
+                    <li><strong>Electronegativity:</strong>${obj.electronegativity}</li>
+                    <li><strong>Atomic Radius:</strong>${obj.atomicRadius}</li>
+                    <li><strong>Van der Waals Radius:</strong>${obj.vanDerWaalsRadius}</li>
+                    <li><strong>Ionization Energy:</strong>${obj.ionizationEnergy}</li>
+                    <li><strong>Electron Affinity:</strong>${obj.electronAffinity}</li>
+                    <li><strong>Oxidation States:</strong>${obj.oxidationStates}</li>
+                    <li><strong>Standard State:</strong>${obj.standardState}</li>
+                    <li><strong>Bonding Type:</strong>${obj.bondingType}</li>
+                    <li><strong>Melting Point:</strong>${obj.meltingPoint}</li>
+                    <li><strong>Boiling Point:</strong>${obj.boilingPoint}</li>
+                    <li><strong>Density:</strong>${obj.density}</li>
+                    <li><strong>Group Block:</strong>${obj.groupBlock}</li>
+                    <li><strong>Year Discovered:</strong>${obj.yearDiscovered}</li>
+                </ul>
+                </div>
+            </div>
+            <button onclick="gotoexam()" >exam</button>
+
+            `
+                }
+                    c++
+                }
+
+                
+
+            }
+        })
+
+
+        function gotoexam(){
+            window.location="/quiz?atomicNumber="+atomicNumber+"&name="+name, "_blank";
+
+        }
+    </script>
+</body>
+</html>
